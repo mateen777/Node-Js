@@ -1,6 +1,7 @@
 // const fs = require('fs');
 import fs from "fs";
 import http from "http";
+import sayHello from "./ES module import-export.js";
 
 //1. create folder
 // fs.mkdirSync('mateen');
@@ -27,22 +28,25 @@ import http from "http";
 //7. Delete Folder
 // fs.rmdirSync('mateen')
 
+// ES Module Import And Export Practice
+sayHello();
+
 
 //creating over own server
-const server = http.createServer((req,res)=>{
-    console.log(req.url);
-    if (req.url == '/') {
-        res.end('Hello Guys, My Name Is Mohammed Mateen');
-    }else if(req.url == '/about') {
-        res.end('About');
-    }else{
-        res.writeHead(404);
-        res.end('404 Not Found');
+// const server = http.createServer((req,res)=>{
+//     console.log(req.url);
+//     if (req.url == '/') {
+//         res.end('Hello Guys, My Name Is Mohammed Mateen');
+//     }else if(req.url == '/about') {
+//         res.end('About');
+//     }else{
+//         res.writeHead(404);
+//         res.end('404 Not Found');
 
-    }
-});
+//     }
+// });
 
-server.listen(8000,"127.0.0.1",()=>{
-    console.log('listening to 8000')
-});  
+// server.listen(8000,"127.0.0.1",()=>{
+//     console.log('listening to 8000')
+// });  
 
